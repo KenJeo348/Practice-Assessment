@@ -94,8 +94,8 @@ def add_combo(menu):
                 # Check if the price is between 0-100 dollars
                 # As a price outside that range is insensible for an item price
                 if item_price <= 0 or item_price > 100:
-                    easygui.msgbox("Please enter a price between 0-100 dollars.",
-                                   "Insensible Price")
+                    easygui.msgbox("Please enter a price between 0-100 dollars"
+                                   ".", "Insensible Price")
                 else:
                     # Break the loop if answer successfully changes to a float
                     # (And price is between the range of 0-100 dollars)
@@ -190,19 +190,19 @@ def delete_combo(menu):
         # Continuous loop that runs until the user enters an existing combo
         while True:
             # Asks user for the name of the combo they wish to delete
-            combo_to_delete = easygui.enterbox("Name of combo you want to delete:",
-                                               "Combo to Delete")
+            combo_to_delete = easygui.enterbox("Name of combo you want to "
+                                               "delete:", "Combo to Delete")
             # Delete the combo if the combo exists in the menu, then break loop
             if combo_to_delete in menu:
                 del menu[combo_to_delete]
-                easygui.msgbox(f"'{combo_to_delete}' has been deleted from the "
-                               f"menu", "Deleted Combo")
+                easygui.msgbox(f"'{combo_to_delete}' has been deleted from the"
+                               f" menu", "Deleted Combo")
                 break
                 # Show error message if entered combo does not exist
             else:
                 easygui.msgbox("The combo you have entered does not exist.\n"
-                               "Please check that you have entered the correct "
-                               "details", "Combo Not Found")
+                               "Please check that you have entered the correct"
+                               " details", "Combo Not Found")
 
 
 # A function that outputs the full menu
